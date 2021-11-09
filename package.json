@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "preact",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "preact build --no-prerender",
+    "serve": "sirv build --port 8080 --cors --single --no-prerender",
+    "dev": "preact watch",
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "",
+    "eslint-config-preact": "",
+    "preact-cli": "",
+    "preact-custom-element": "jvdsande/preact-custom-element#features\/no-shadow-children",
+    "sirv-cli": ""
+  },
+  "dependencies": {
+    "classnames": "",
+    "preact": "",
+    "preact-render-to-string": "",
+    "preact-router": ""
+  }
+}
