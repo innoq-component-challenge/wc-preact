@@ -12,7 +12,8 @@
 <body>
     <div class="container">
         <h1>Badges</h1>
-        <div> This is a <preact-badge type="danger" caption="Badge"></preact-badge>
+        <div>
+            This is a <preact-badge type="danger">Badge</preact-badge>
         </div>
 
         <h1 class="mt-5">Buttons</h1>
@@ -30,16 +31,15 @@
             <span slot="heading"><span lang="de">Großartige</span> Card</span>
             <span slot="footer">This is the footer!</span>
         </preact-card>
-
         <hr />
         <preact-card heading-level="2" heading="Another preact-card with a Link as Header" href="#foo"> Content baby! </preact-card>
 
         <h1 class="mt-5">List</h1>
         <preact-list>
-            <dt>Type</dt>
-            <dd>Car</dd>
-            <dt>Color</dt>
-            <dd><span lang="de">Etwas</span> text</dd>
+            <preact-list-dt>Type</preact-list-dt>
+            <preact-list-dd>Car</preact-list-dd>
+            <preact-list-dt>Color</preact-list-dt>
+            <preact-list-dd><span lang="de">Etwas</span> text</preact-list-dd>
         </preact-list>
         
         <h1 class="mt-5">MagicHeaders</h1>

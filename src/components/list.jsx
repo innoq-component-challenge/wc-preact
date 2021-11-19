@@ -6,16 +6,16 @@ let formatChildren = (children, keyClass, valueClass) => {
     let items = [];
     let i = -1;
     children.forEach((child) => {
-        if (child.type == "dt") {
+        if (child.type == "preact-list-dt") {
             i++;
             items[i] = {valueProps: {}, value: []}
             items[i].dt = <dt class={classnames(keyClass, child.props.class)} {...child.props.keyProps}>{child.props.children}</dt>;
         }
-        else if (i >= 0 && child.type == "dd") {
+        else if (i >= 0 && child.type == "preact-list-dd") {
             items[i].dd = <dd class={classnames(valueClass, child.props.class)} {...child.props}>{child.props.children}</dd>
         }
         else {
-            // Ignore everything outside `<dt>` and `<dd>`    
+            // Ignore everything outside `<preact-list-dt>` and `<preact-list-dd>`    
         }
     });
 

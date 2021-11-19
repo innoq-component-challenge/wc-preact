@@ -6,9 +6,9 @@ const TYPES = {
 	default: "bg-secondary"
 };
 
-const Badge = ({ type, caption }) => {
+const Badge = ({ type, caption, children }) => {
 	let cls = classNames("badge", TYPES[type] || TYPES['default']);
-	return <span class={cls}>{caption}</span>;
+	return <span class={cls}>{caption || children}</span>;
 }
 
 export default register(Badge, 'preact-badge', ['type', 'caption']);
